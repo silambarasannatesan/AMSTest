@@ -1,4 +1,4 @@
-# This project contains the java program to validate the password for the below confitions
+# This project contains the java program to validate the password for the below conditions
 1.	- password should be larger than 8 chars
 2.	- password should not be null
 3.	- password should have one uppercase letter at least
