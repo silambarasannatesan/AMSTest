@@ -16,5 +16,11 @@ public class PasswordValidatorTest {
         boolean isPasswordLengthValid = PasswordValidator.isValid("TestPasswordLength");
         assertFalse(String.valueOf(isPasswordLengthValid),false);
     }
+	
+	 @Test
+    public void testPasswordisNull() throws InvalidPasswordException {
+        boolean isPasswordNotNull = PasswordValidator.isValid(null);
+        assertFalse(String.valueOf(isPasswordNotNull),false);
+    }
 
  }
