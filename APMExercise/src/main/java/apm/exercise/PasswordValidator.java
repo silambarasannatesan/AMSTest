@@ -21,6 +21,64 @@ public class PasswordValidator {
         if (password != null) {
             conditionCounter += 1;
         }
+		
+		if (true) {
+            int count = 0;
+
+            // check digits from 0 to 9 at least
+            for (int i = 0; i <= 9; i++) {
+
+                // to convert int to string
+                String str1 = Integer.toString(i);
+
+                if (password.contains(str1)) {
+                    conditionCounter += 1;
+                }
+            }
+        }
+
+        if (true) {
+            int count = 0;
+
+            // checking at least one capital letters
+            for (int i = 65; i <= 90; i++) {
+
+                // type casting
+                char c = (char)i;
+
+                String str1 = Character.toString(c);
+                if (password.contains(str1)) {
+                    count = 1;
+                }
+            }
+            if (count == 1) {
+                conditionCounter += 1;
+            }
+        }
+
+        if (true) {
+            int count = 0;
+
+            // checking at least one small letters
+            for (int i = 90; i <= 122; i++) {
+
+                // type casting
+                char c = (char)i;
+                String str1 = Character.toString(c);
+
+                if (password.contains(str1)) {
+                    count = 1;
+                }
+            }
+            if (count == 0) {
+                conditionCounter += 1;
+            }
+        }
+
+        if(conditionCounter < 3)
+        {
+            return false;
+        }
 
         // The password is valid
         return true;

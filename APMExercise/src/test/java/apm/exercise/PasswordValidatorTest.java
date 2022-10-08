@@ -22,5 +22,11 @@ public class PasswordValidatorTest {
         boolean isPasswordNotNull = PasswordValidator.isValid(null);
         assertFalse(String.valueOf(isPasswordNotNull),false);
     }
+	
+	 @Test
+    public void testPasswordHasNoCaps() throws InvalidPasswordException {
+        boolean isPasswordHasValidCaps = PasswordValidator.isValid("tespPasswordlength");
+        assertFalse(String.valueOf(isPasswordHasValidCaps),false);
+    }
 
  }
